@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=/, initial-scale=1.0">
+    <title>Gemini - Exercicio 02</title>
+</head>
+<body>
+    <input type="text" id="campo">
+    <div id="valida"></div>
+    <script>
+        let campo = document.getElementById("campo");
+        let valida = document.getElementById("valida");
+        
+        campo.addEventListener("input", function(){            
+            let contagem = campo.value.length;
+            valida.innerText = `Você digitou ${contagem} caracteres.`;
+
+            if (contagem > 10) {
+                valida.style.color = "red";
+            } else{
+                valida.style.color = "black";
+            }
+        });
+    </script>
+</body>
+</html>

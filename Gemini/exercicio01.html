@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini - Exercício 01</title>
+</head>
+<body>    
+    <input type="button" value="Modo Escuro" id="btn_modo">
+</body>
+<script>
+    let modo = window.document.getElementById("btn_modo");
+    let corpo = window.document.body;
+
+    modo.addEventListener('click', function() {
+        if (modo.value === "Modo Escuro") {
+            // Ações para Ativar Modo Escuro
+            modo.value = "Modo Claro";
+            corpo.style.backgroundColor = "black";            
+            
+            modo.style.backgroundColor = "green";
+            modo.style.color = "yellow";
+        } else {
+            // Ações para Voltar ao Modo Claro
+            modo.value = "Modo Escuro";
+            corpo.style.backgroundColor = "white";
+                        
+            // Resetando o botão para o estilo padrão (vazio limpa o estilo inline)
+            modo.style.backgroundColor = "";
+            modo.style.color = "";
+        }
+    });
+</script>
+</html>
